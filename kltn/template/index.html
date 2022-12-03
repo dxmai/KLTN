@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>WaW</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon" />
+    <link href="{% static 'assets/img/favicon.png' %}" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Maundy - v4.8.1
+  * Template URL: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+      <div class="container d-flex flex-column align-items-center">
+        <h1>WaW</h1>
+        <h2>Who is that famous person & What's the event?</h2>
+
+        <div class="subscribe">
+          <!-- Upload file from device -->
+          <p>
+            <input
+              type="file"
+              accept="image/*"
+              name="image"
+              id="file"
+              onchange="loadFile(event)"
+              style="display: none"
+            />
+          </p>
+          <p><label for="file" style="cursor: pointer">Upload Image</label></p>
+          <p>or</p>
+
+          <!-- Upload file from external url -->
+          <p>
+            Paste URL
+          <!-- Browse to get the image -->
+            <input
+              class="get-button"
+              type="submit"
+              value="Get image"
+              onclick="getFile()"
+            />
+          </p>
+          <p>
+            <input
+              class="search-box"
+              type="url"
+              id="url"
+              name="url"
+              placeholder="Image's URL"
+              onchange="loadFile(event)"
+            />
+          </p>
+
+          <!-- Run model button -->
+          <p>
+            <button type="button" class="btn btn-success">Search</button>
+          </p>
+
+          <script src="../static/assets/js/handlerFile.js"></script>
+
+          <!-- Display image -->
+          <p><img id="output" width="500" /></p>
+        </div>
+
+        <div class="social-links text-center"></div>
+      </div>
+    </header>
+    <!-- End #header -->
+
+    <main id="main">
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title"></div>
+          <div class="row">
+            <div class="col-lg-5 d-flex align-items-stretch"></div>
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Maundy</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact.  -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/maundy-free-coming-soon-bootstrap-theme/  -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End #footer -->
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>
